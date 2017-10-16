@@ -4,7 +4,6 @@ import sys
 from unicodedata import normalize
 
 param = "-".join(sys.argv[1:])
-print(param)
 
 def loadingSynonyms():
 	try:
