@@ -1,39 +1,46 @@
 # pysinonimos
 
-> Buscador de sinônimos por linha de comando.
+> Buscador de sinônimos para palavras em português brasileiro escrito em Python.
+
+[![PyPI version](https://badge.fury.io/py/pysinonimos.svg)](https://badge.fury.io/py/pysinonimos)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
+## Instalação:
+
+```pip install pysinonimos```
 
 ## Exemplos:
 
 ```
-$ python pysinonimos a fim de
-Carregando sinônimos para 'a-fim-de'...
-5 resultados encontrados:
-['para', 'com intenção de', 'com o propósito de', 'com o intuito de', 'com o objetivo de']
+>>> from pysinonimos import Search, historic
 
-python pysinonimos.py portanto
-Carregando sinônimos para 'portanto'...
-22 resultados encontrados:
-['por conseguinte', 'logo', 'consequentemente', 'por isso', 'assim sendo', 'por consequência',
-'em vista disso', 'à vista disso', 'sendo assim','desse modo', 'dessa forma', 'dessa maneira',
-'isto posto', 'destarte','dessarte', 'por isto', 'deste modo', 'desta forma', 'desta maneira',
-'então', 'assim', 'pois']
+>>> apresentacao = Search("apresentação")
+>>> sinonimos_de_apresentacao = apresentacao.synonyms()
+>>> print(sinonimos_de_apresentacao)
+['ida', 'vinda', 'aparição', 'aparecimento', 'surgimento', 'presença', 'comparecimento', 'forma',
+'conformação', 'imagem', 'porte', 'formato', 'configuração', 'feitio', 'talhe', 'fisionomia',
+'figura', 'aspecto', 'aparência', 'adução', 'manifestação', 'exposição', 'alegação', 'declaração',
+'relato', 'comunicação', 'propaganda', 'difusão', 'divulgação', 'veiculação', 'abonação', 'indicação',
+'proposição', 'proposta', 'sugestão', 'recomendação', 'sessão', 'atuação', 'show', 'exibição',
+'espetáculo', 'mostra', 'demonstração', 'função', 'produção', 'introdução', 'anteâmbulo', 'prolusão',
+'prólogo', 'prefácio', 'preâmbulo']
+
+>>> historico = historic()
+>>> print(historico)
+
+4 resultados encontrados para 'avião':
+['aeronave', 'aeronave', 'aeroplano', 'aparelho']
+
+51 resultados encontrados para 'apresentação':
+['ida', 'vinda', 'aparição', 'aparecimento', 'surgimento', 'presença', 'comparecimento', 'forma',
+'conformação', 'imagem', 'porte', 'formato', 'configuração', 'feitio', 'talhe', 'fisionomia',
+'figura', 'aspecto', 'aparência', 'adução', 'manifestação', 'exposição', 'alegação', 'declaração',
+'relato', 'comunicação', 'propaganda', 'difusão', 'divulgação', 'veiculação', 'abonação', 'indicação',
+'proposição', 'proposta', 'sugestão', 'recomendação', 'sessão', 'atuação', 'show', 'exibição',
+'espetáculo', 'mostra', 'demonstração', 'função', 'produção', 'introdução', 'anteâmbulo', 'prolusão',
+'prólogo', 'prefácio', 'preâmbulo']
 ```
 
-## Comandos principais:
+## Créditos:
 
-```
-$ python pysinonimos "palavra" - Busca por sinônimo
-$ python pysinonimos -h - Ajuda
-$ python pysinonimos -his - Histórico de buscas
-$ python pysinonimos -del - Exclui histórico de buscas
-```
-
-## Instalação
-
-Obs.: Necessário uso do Python 3 como default e <code>pip</code> instalado
-
-<ol>
-  <li>Clone o projeto;</li>
-  <li>Rode o <code>pip install -r requirements.txt</code>;</li>
-  <li>Ok!</li>
-</ol>
+>> Diego Fernando
