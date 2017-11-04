@@ -12,7 +12,7 @@
 ## Exemplos:
 
 ```
->>> from pysinonimos import Search, historic
+>>> from pysinonimos.sinonimos import Search, historic
 
 >>> apresentacao = Search("apresentação")
 >>> sinonimos_de_apresentacao = apresentacao.synonyms()
