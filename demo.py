@@ -1,4 +1,4 @@
-from pysinonimos import Search, about, historic
+from pysinonimos.sinonimos import Search, about, historic
 
 aviao = Search("avião")
 sin_aviao = doce.synonyms(verbose=True)
